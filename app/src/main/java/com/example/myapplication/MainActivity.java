@@ -100,17 +100,17 @@ public class MainActivity extends AppCompatActivity {
         if (type.equals("*")) {
             type_view.setText("*");
             if (random.nextBoolean()) {
-                number1_view.setText(String.valueOf(getRandomNumber(0, 5)));
+                number1_view.setText(String.valueOf(getRandomNumber(0, 7)));
                 number2_view.setText(String.valueOf(getRandomNumber(0, 11)));
             } else {
                 number1_view.setText(String.valueOf(getRandomNumber(0, 11)));
-                number2_view.setText(String.valueOf(getRandomNumber(0, 5)));
+                number2_view.setText(String.valueOf(getRandomNumber(0, 7)));
             }
         } else if (type.equals("/")) {
             int tempNumber1, tempNumber2;
             type_view.setText("/");
 
-            tempNumber2 = getRandomNumber(0, 5);
+            tempNumber2 = getRandomNumber(0, 7);
             tempNumber1 = getRandomNumber(0, 11) * tempNumber2;
 
             if ((tempNumber2 != 0) && (((double)tempNumber1 / tempNumber2) == (int)(tempNumber1 / tempNumber2))) {
